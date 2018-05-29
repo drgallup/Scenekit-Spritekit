@@ -15,6 +15,7 @@
 		1D00C59A20BDBB1A00CA2B74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D00C59820BDBB1A00CA2B74 /* LaunchScreen.storyboard */; };
 		1D00C5A520BDBB1A00CA2B74 /* Scenekit_SpritekitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D00C5A420BDBB1A00CA2B74 /* Scenekit_SpritekitTests.swift */; };
 		1D00C5B020BDBB1A00CA2B74 /* Scenekit_SpritekitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D00C5AF20BDBB1A00CA2B74 /* Scenekit_SpritekitUITests.swift */; };
+		1D00C5C120BDC34B00CA2B74 /* big_buck_bunny.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 1D00C5C020BDC34B00CA2B74 /* big_buck_bunny.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		1D00C5AB20BDBB1A00CA2B74 /* Scenekit-SpritekitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Scenekit-SpritekitUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D00C5AF20BDBB1A00CA2B74 /* Scenekit_SpritekitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scenekit_SpritekitUITests.swift; sourceTree = "<group>"; };
 		1D00C5B120BDBB1A00CA2B74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1D00C5C020BDC34B00CA2B74 /* big_buck_bunny.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = big_buck_bunny.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				1D00C58F20BDBB1900CA2B74 /* art.scnassets */,
 				1D00C59120BDBB1900CA2B74 /* GameViewController.swift */,
 				1D00C59320BDBB1900CA2B74 /* Main.storyboard */,
+				1D00C5C020BDC34B00CA2B74 /* big_buck_bunny.mp4 */,
 				1D00C59620BDBB1A00CA2B74 /* Assets.xcassets */,
 				1D00C59820BDBB1A00CA2B74 /* LaunchScreen.storyboard */,
 				1D00C59B20BDBB1A00CA2B74 /* Info.plist */,
@@ -234,6 +237,7 @@
 			files = (
 				1D00C59020BDBB1900CA2B74 /* art.scnassets in Resources */,
 				1D00C59A20BDBB1A00CA2B74 /* LaunchScreen.storyboard in Resources */,
+				1D00C5C120BDC34B00CA2B74 /* big_buck_bunny.mp4 in Resources */,
 				1D00C59720BDBB1A00CA2B74 /* Assets.xcassets in Resources */,
 				1D00C59520BDBB1900CA2B74 /* Main.storyboard in Resources */,
 			);

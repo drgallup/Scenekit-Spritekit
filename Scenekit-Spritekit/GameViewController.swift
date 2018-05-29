@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SpriteKit
+import AVFoundation
 import QuartzCore
 import SceneKit
 
@@ -40,10 +42,23 @@ class GameViewController: UIViewController {
         ambientLightNode.light!.color = UIColor.darkGray
         scene.rootNode.addChildNode(ambientLightNode) */
         
-        // retrieve the plane node
-        let plane = scene.rootNode.childNode(withName: "plane", recursively: true)!
+        // A SpriteKit scene to contain the SpriteKit video node
+        let skScene = SKScene(size: CGSize(width: 640, height: 480))
+        let videoNode = SKVideoNode(fileNamed: "big_buck_bunny.mp4")
+        videoNode.play()
+        // place the video node
+        skScene.addChild(videoNode)
+        videoNode.position = CGPoint(x: skScene.size.width/2, y: skScene.size.height/2)
+        videoNode.size = skScene.size
         
-        plane.geometry?.firstMaterial!.diffuse.contents = UIImage(named: "art.scnassets/texture.png")
+        // retrieve the plane node
+        let plane = scene.rootNode.childNode(withName: "box", recursively: true)!
+        
+        //let videoURL = Bundle.main.url(forResource: "big_buck_bunny", withExtension: ".mp4")!
+        //let videoPlayer = AVPlayer(url: videoURL)
+        //videoPlayer.play()
+        
+        plane.geometry!.firstMaterial!.diffuse.contents = skScene//UIImage(named: "art.scnassets/texture.png")
         
         // animate the 3d object
         //plane.runAction(SCNAction.repeatForever(SCNAction.rotateBy(x: 0, y: 2, z: 0, duration: 1)))
@@ -66,6 +81,14 @@ class GameViewController: UIViewController {
         // add a tap gesture recognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         scnView.addGestureRecognizer(tapGesture)
+        
+        // matrix math
+        var translation = matrix_identity_float4x4
+        translation.columns.3.z = -1.0
+        //plane.simdTransform = matrix_multiply(scnView.session.currentFrame.camera.transform, translation)
+        plane.eulerAngles = SCNVector3(Double.pi,0,0)
+        
+        //videoPlayer.play()
     }
     
     @objc
